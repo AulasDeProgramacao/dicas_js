@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Série Dicas JS - Ep01: Hoisting</title>
+
+	<script type="text/javascript">
+		function getValor() {
+			var retornaValor = function() {
+				return 1;
+			}
+
+			return retornaValor();
+
+			var retornaValor = function() {
+				return 2;
+			}
+		}
+
+		var resultado = getValor();
+		console.log(resultado);
+	</script>
+</head>
+<body>
+	<h1>Exemplo 03</h1>
+	<p><strong>Não esqueça de habilitar o console do browser</strong></p>
+</body>
+</html>
