@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dicas Javascript - Ep02</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Página Principal</h1>
+		<button adp-action="partialA.html" 
+			adp-target="#content">Página A</button>
+		<button adp-action="partialB.html" 
+			adp-target="#content">Página B</button>
+	</header>
+
+	<div id="content"></div>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script type="text/javascript">
+		DicasJS.setupActions();
+	</script>
+</body>
+</html>
