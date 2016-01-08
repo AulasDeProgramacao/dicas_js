@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dicas JS - Ep04 Namespace</title>
+</head>
+<body>
+
+<label>One Way Binding</label>
+<input id="sourceInput">
+<input id="targetInput">
+
+<hr>
+
+<label>Two Way Binding</label>
+<input id="component1">
+<input id="component2">
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="adp.js"></script>
+<script type="text/javascript" src="adp.logger.js"></script>
+<script type="text/javascript" src="adp.helper.js"></script>
+<script type="text/javascript" src="adp.binding.js"></script>
+<script type="text/javascript">
+	Adp.logger.level = 4;
+
+	var sourceInput = $('#sourceInput');
+	var targetInput = $('#targetInput');
+
+	Adp.binding.oneWay(sourceInput, targetInput);
+
+	var c1 = $('#component1');
+	var c2 = $('#component2');
+
+	Adp.binding.twoWay(c1, c2);
+</script>
+</body>
+</html>
