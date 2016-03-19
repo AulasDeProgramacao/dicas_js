@@ -4,5 +4,10 @@ Adp.fakemodule2 = {
 	},
 	setupFragment: function(targetSelector) {
 		console.log('[FRAGMENT] Configurando FakeModule2 para ' + targetSelector);
+	},
+	moreFake: {
+		setupFragment: function(targetSelector) {
+			console.log('[FRAGMENT] Configurando MoreFake para ' + targetSelector);
+		},
 	}
 };

@@ -2,11 +2,10 @@ if(Adp !== undefined) throw "Adp já foi definido";
 
 var Adp = {
 	module: {
-		depends: function() {
-			for(var i = 0; i < arguments.length; i++) {
-				if(Adp[arguments[i]] === undefined) {
-					throw arguments[i] + " não foi definido";
-				}
+		depends: function(...modules) {
+			var fails = modules.filter(e => {return Adp[e] === undefined});
+			if(fails.length) {
+				throw "Os seguintes módulos não foram carregados: " + fails;
 			}
 		},
 		notExists: function(moduleName) {
